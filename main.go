@@ -32,7 +32,7 @@ func main() {
 
 	extractedText := &HTMLParser{}
 	xml.Unmarshal([]byte(body), extractedText)
-	if response.StatusCode == 200 && extractedText.BodyText == "Hello World" {
+	if response.StatusCode == 200 && extractedText.BodyText == "Hello World!" {
 		fmt.Println("Ok")
 		os.Exit(0)
 	} else {
