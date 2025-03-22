@@ -11,7 +11,7 @@ import (
 func main() {
 	client := &http.Client{Timeout: 10 * time.Second}
 
-	respone, err := client.Get("http://localhost")
+	respone, err := client.Get("http://172.31.28.67")
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
