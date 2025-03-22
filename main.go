@@ -5,10 +5,13 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"time"
 )
 
 func main() {
-	respone, err := http.Get("http://localhost")
+	client := &http.Client{Timeout: 10 * time.Second}
+
+	respone, err := client.Get("http://localhost")
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
