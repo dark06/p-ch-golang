@@ -23,3 +23,12 @@ go.work.sum
 
 # env file
 .env
+
+# Task
+.task/
+
+# Project
+go/
+
+# Visual Studio Code
+.vscode/
